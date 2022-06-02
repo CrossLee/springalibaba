@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config-nacos" target="8" />
+      <module name="order" target="8" />
+      <module name="order-nacos" target="8" />
+      <module name="order-openfeign" target="8" />
+      <module name="order-openfeign-sentinel" target="8" />
+      <module name="order-ribbon" target="8" />
+      <module name="order-sentinel" target="8" />
+      <module name="sentinel-demo" target="8" />
+      <module name="springalibaba" target="8" />
+      <module name="stock" target="8" />
+      <module name="stock-nacos" target="8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
