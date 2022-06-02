@@ -1,0 +1,16 @@
+server:
+  port: 8041
+
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: 121.5.101.84:8847
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+feign:
+  sentinel:
+    enabled: true

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: com.qdstorm.order
+  cloud:
+    nacos:
+      server-addr: payt.qdstorm.com:8847
+      username: nacos
+      password: nacos
+      config:
+        file-extension: yaml
+        namespace: 7c867f5a-307c-4c8d-8045-806620021d17
+        group: DEFAULT_GROUP
+        shared-configs:
+          - data-id: com.qdstorm.common.properties
+            refresh: true
+            group: DEFAULT_GROUP

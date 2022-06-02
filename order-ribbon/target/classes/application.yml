@@ -1,0 +1,21 @@
+server:
+  port: 8030
+
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: 121.5.101.84:8847
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+stock-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.qdstorm.ribbon.rule.CustomRule
+ribbon:
+  eager-load:
+    enabled: true
+    clients:
+      - stock-service
