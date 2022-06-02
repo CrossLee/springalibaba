@@ -1,0 +1,37 @@
+server:
+  port: 8040
+
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      server-addr: 121.5.101.84:8847
+      discovery:
+        username: nacos
+        password: nacos
+        namespace: public
+stock-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.qdstorm.ribbon.rule.CustomRule
+ribbon:
+  eager-load:
+    enabled: true
+    clients:
+      - stock-service
+
+# Spring 默认日志级别 INFO
+logging:
+  level:
+    com.qdstorm.order.feign: DEBUG
+
+# Feign 日志
+feign:
+  client:
+    config:
+      stock-service:
+        loggerLevel: BASIC
+        connectTimeout: 5000
+        readTimeout: 10000
+        requestInterceptors:
+          - com.qdstorm.order.interceptor.feign.CustomFeignInterceptor
