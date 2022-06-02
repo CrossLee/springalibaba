@@ -1,0 +1,11 @@
+/.idea/
+/config-nacos/target/
+/order/target/
+/order-nacos/target/
+/order-openfeign/target/
+/order-openfeign-sentinel/target/
+/order-ribbon/target/
+/order-sentinel/target/
+/sentinel-demo/target/
+/stock/target/
+/stock-nacos/target/
