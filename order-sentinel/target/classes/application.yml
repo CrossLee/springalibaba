@@ -5,6 +5,15 @@ spring:
     name: order-sentinel
   cloud:
     sentinel:
+      eager: true
       transport:
         dashboard: 127.0.0.1:8858
       web-context-unify: false # 默认将调用链路收敛
+      datasource:
+        flow-rule: # 可以自定义
+          nacos:
+            server-addr: 121.5.101.84:8847
+            username: nacos
+            password: nacos
+            dataId: order-sentinel-flow-rule
+            rule-type: flow
